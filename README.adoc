@@ -1,0 +1,28 @@
+= Beginning Rust
+
+Getting started with rust 2021 edition by Carlo Milanesi 
+Notes 
+
+== Getting Started 
+
+[source, rust]
+----
+fn main(){
+    println!("Hey there!");
+}
+----
+
+== Doing Arithmetic and Writing More Code 
+
+[source, rust]
+----
+println!("The sum is {}", 52.2+63.58);
+----
+
+== Naming Objects 
+
+[source, rust]
+----
+let this = 3; // cannot be changed 
+let mut that = 5; //can be changed 
+----
