@@ -1,3 +1,5 @@
+:toc: 
+
 = Beginning Rust
 
 Getting started with rust 2021 edition by Carlo Milanesi 
@@ -25,4 +27,8 @@ println!("The sum is {}", 52.2+63.58);
 ----
 let this = 3; // cannot be changed 
 let mut that = 5; //can be changed 
+
+let _num = 7 // will not warn you incase _num is never used 
+let _ = 7 // you don't want to specify any name (not a valid expression)
 ----
+
