@@ -1,9 +1,28 @@
-:toc: 
-
-= Beginning Rust
+= Beginning Rust: Short Notes
+Dr. Sam Macharia <https://orcid.org/0000-0002-7326-7502>; Home <https://SiliconWit.com>
+:description: Engineering, Computing, Science, and Philosophy 
+:keywords: Mechanics of Solids, Mechanics of Materials, Strength of Materials, 
+:docinfo1: 
+:nofooter:
+:title-page-background-image: image:rust.jpeg[fit=none, pdfwidth=55%,position=bottom left]
+:doctype: book
+:backend: docbook
+:toc: left 
+:icons: font 
+:favicon: favicon.png
+:stem: asciimath
+:figure-caption: Figure
+:figure-number: 
+:source-highlighter: rouge // not used 
+:source-highlighter: highlight.js
+:stem: latexmath 
+:numbered:
+:eqnums: all
+:imagesdir: beginning-rust-figs
+:experimental: 
 
 Getting started with rust 2021 edition by Carlo Milanesi 
-Notes 
+(personal notes). 
 
 == Getting Started 
 
@@ -28,7 +47,52 @@ println!("The sum is {}", 52.2+63.58);
 let this = 3; // cannot be changed 
 let mut that = 5; //can be changed 
 
-let _num = 7 // will not warn you incase _num is never used 
+let _num = 7 // will not warn you in case _num is never used 
 let _ = 7 // you don't want to specify any name (not a valid expression)
 ----
+
+* The type of a variable can be deduced or inferred from the expression used to initialize it.
+
+[source, rust]
+----
+let mut num; // compiler cannot assign a datatype
+let mut num = 6; //compiler understands: this will always be an int
+----
+
+* By default, Rust includes the standard library. 
+
+[source, rust]
+----
+println!("There're {} words in the word two.", "two".len()); // or:
+println!("There're {} words in the word three.", str::len("three"));
+----
+
+== Controlling Execution Flow 
+
+=== if-else 
+
+[source, rust]
+----
+fn main() {
+    let n:i32 = -4;
+
+    if n <= 5 && n>0 {println!("Num is less than 5");}
+    else if n <= 10 && n >5 {println!("Num is less than 10");}
+    else {println!("Num is not within range");}
+}
+----
+
+[source, rust]
+----
+fn main() {
+    let n:i32 = 5;
+    println!("{}",
+        if n <= 5 && n>0 {"Num is less than 5"}
+        else if n <= 10 && n >5 {"Num is less than 10"}
+        else {"Num is not within range"}
+    )
+}
+----
+
+* In Rust, `if` can be used as a _statement_ and as an _expression_.
 
